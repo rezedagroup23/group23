@@ -1,3 +1,9 @@
-Gabitova R.R
-Have a wonderful dog Panda and an angry cat Mr.Hankey.
-I wanna earn 99999999999$
+{ 
+"name":"GabitovaRR",
+"age":34,
+"pets":[
+	"wonderful dog Panda",
+	"angry cat Mr.Hankey"
+],
+"wantedSalary":999999999
+}
