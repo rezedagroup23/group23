@@ -1,0 +1,65 @@
+1) Посмотреть где я 
+pwd
+2) Создать папку 
+mkdir hw1
+3) Зайти в папку  
+cd hw1
+4) Создать 3 папки 
+mkdir hwfolder1 hwfolder2 hwfolder3
+5) Зайти в любоую папку 
+cd hwfolder2
+6) Создать 5 файлов (3 txt, 2 json) 
+touch 1.txt 2.txt 3.txt 4.json 5.json  // либо > 6.txt > 7.json > 8.xml
+7) Создать 3 папки 
+mkdir f2fd1 f2fd2 f2fd3
+8. Вывести список содержимого папки 
+ls -la
+9) + Открыть любой txt фал  
+vim 6.txt // start 1.txt через обычный блокнот
+10) + написать туда что-нибудь, любой текст. 
+i
+11) + сохранить и выйти.  
+esc :wq
+12) Выйти из папки на уровень выше 
+cd .. 
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. 
+mv 2.txt 3.txt -t ./f2fd1/f2fd2 // mv ./hwfolder2/{2.txt,3.txt} ./hwfolder2/f2fd1/f2fd2/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.  
+cp ./hwfolder2/{3.txt,4.json} ./hwfolder1
+15) Найти файл по имени 
+find -name 1.txt либо find ./ -type f -name 1.txt  //поиск в конкретной папке find 3.txt  либо  find ./hwfolder3/4.json 
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -n 50 -f 1.txt
+17) вывести несколько первых строк из текстового файла 
+head -n 10 ./hwfolder2/f2fd3/1.txt
+18) вывести несколько последних строк из текстового файла
+tail -n 10 ./hwfolder2/f2fd3/1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less ./hwfolder2/f2fd3/1.txt
+20) вывести дату и время
+date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+https://api.quarantine.country/api/v1/regions  
+curl -k https://api.quarantine.country/api/v1/regions 
+эти команды сработали тоже, но с возвращением ошибки
+curl https://api.quarantine.country/api/v1/regions 
+curl -X PUT -d arg=val -d arg2=val2 https://api.quarantine.country/api/v1/regions
+curl -i -X options https://api.quarantine.country/api/v1/regions
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+touch script.sh
+vim script.sh
+i
+cd hw1
+mkdir script1 script2 script3
+cd script1
+touch si.txt ri.txt pt.txt
+mkdir script4 script5 script6
+ls -la
+mv ./{sc.txt,ri.txt} ~/hw1/hwfolder1
+esc :wq
+chmod +x ./script.sh
+sh ./script
+
