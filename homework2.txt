@@ -1,0 +1,105 @@
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.https://github.com/rezedagroup23/hw2
+mkdir hw2
+cd hw2
+git clone git@github.com:rezedagroup23/hw2.git
+cd hw2
+ 4. Создать файл “new.json”
+ touch new.json
+ 5. Добавить файл под гит.
+ git add new.json
+ 6. Закоммитить файл.
+  git commit -m "add new.json file"
+ 7. Отправить файл на внешний GitHub репозиторий.
+ git push
+ 8. Создать файлы 
+  touch new2.json new2.xml new2.txt
+ 9. Добавить файлы под гит.
+ git add .
+ 10. Закоммитить файлы.
+ git commit -m "add new2.json, new2.xml, new2.txt files"
+ 11. Отправить файлы на внешний GitHub репозиторий.
+ git push
+ 12. Отредактировать содержание файла “new2.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата).
+ vim new2.txt
+i 
+Gabitova R.R
+Have a wonderful dog Panda and an angry cat Mr.Hankey.
+I wanna earn 99999999999$
+esc :wq
+ 13. Отредактировать содержание файла “new2.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+ vim new2.json
+i 
+"name":"GabitovaRR",
+"age":34,
+"pets":[
+        "wonderful dog Panda",
+        "angry cat Mr.Hankey"
+],
+"wantedSalary":999999999
+}
+~
+ esc :wq
+ 14. Добавить и закоммитить “new2.txt” одной строчкой. 
+ git add new2.txt && git commit -m "edit new2.txt"
+ 15. Добавить и закоммитить “new2.json” одной строчкой. 
+ git add new2.json && git commit -m "edit new2.json"
+ 16. Отправить изменения на внешний репозиторий.
+ git push
+ 17. Отредактировать содержание файла “new2.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+  vim new2.xml
+  i
+  <?xml version="1.0"?>
+<ME>
+  <NAME>Gabitova RR</NAME>
+  <AGE>34</AGE>
+  <PETS>2</PETS>
+  <WANTEDSALARY>99999999</WANTEDSALARY>
+  </ME>
+esc
+:wq
+//
+  <xsd:element name="ME">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="NAME" type="xsd:string"/>
+      <xsd:element name="AGE" type="xsd:positiveInteger"/>
+      <xsd:element name="PETS" type="xsd:positiveInteger"/>
+      <xsd:element name="WANTEDSALARY" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+ 18. Добавить и закоммитить “new2.xml” одной строчкой. 
+ git add new2.xml && git commit -m "edit new2.xml
+ 19. Отправить изменения на внешний репозиторий.
+ git push
+ 20. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий.
+ mv .//Desktop/homework1.txt ./group23/github/hw2/hw2
+ git add homework1.txt && git commit -m "add first homework"
+ git push
+ 21. В веб интерфейсе GitHub создать файл new3.txt.
+ add file - create a new file - commit new file
+ 22. Отредактировать в веб интерфейсе содержание файла “new3.txt” - написать информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить).
+ new3.txt - commit changes
+ 23. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 24. Синхронизировать внешний и локальный репозитории (слить изменения с внешнего репозитория)
+ git pull
+ 25. Отредактировать в веб интерфейсе содержание файла “new2.json” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате JSON.
+ "favoriteMovie":"Interstellar",
+"favoriteSeries":"Friends",
+"favoriteFood":"delicious",
+"favoriteSeason":"all",
+"dreamland":"Australia"
+ 26. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 27. Синхронизировать внешний и локальный репозитории 
+ git pull
+ 28. Отредактировать в веб интерфейсе содержание файла “new2.xml” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате XML.
+ <FAVORITEMOVIE>Interstellar<FAVORITEMOVIE>,
+  <FAVORITEMOVIE>"favoriteSeries":"Friends",
+  <FAVORITEFOOD>delicious<FAVORITEFOOD>,
+  <FAVORITESEASON>all<FAVORITESEASON>,
+  <DRAEMLAND>Australia<DRAEMLAND>
+ 29. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 30. Синхронизировать внешний и локальный репозитории 
+ git pull
+
+Данные для заполнения и редактирования файлов можете использовать любые, не обязательно свои
