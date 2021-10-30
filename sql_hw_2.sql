@@ -1,9 +1,9 @@
 --SQL_DDL_Joins
---РўР°Р±Р»РёС†Р° employees
---РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ employees
+--Таблица employees
+--Создать таблицу employees
 --- id. serial,  primary key,
 --- employee_name. Varchar(50), not null
---РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ employee 70 СЃС‚СЂРѕРєР°РјРё.
+--Наполнить таблицу employee 70 строками.
 
 CREATE TABLE employees(
 id serial PRIMARY KEY,
@@ -240,12 +240,12 @@ values  (default, 'D?in');
 select * FROM employees;
 
 
---РўР°Р±Р»РёС†Р° salary
+--Таблица salary
 --
---РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ salary
+--Создать таблицу salary
 --- id. Serial  primary key,
 --- monthly_salary. Int, not null
---РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 15 СЃС‚СЂРѕРєР°РјРё:
+--Наполнить таблицу salary 15 строками:
 --- 1000
 --- 1100
 --- 1200
@@ -318,13 +318,13 @@ values (default, 2400);
 insert into salary (id, monthly_salary)
 values (default, 2500);
 
---РўР°Р±Р»РёС†Р° employee_salary
---РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ employee_salary
+--Таблица employee_salary
+--Создать таблицу employee_salary
 --- id. Serial  primary key,
 --- employee_id. Int, not null, unique
 --- salary_id. Int, not null
---РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 40 СЃС‚СЂРѕРєР°РјРё:
---- РІ 10 СЃС‚СЂРѕРє РёР· 40 РІСЃС‚Р°РІРёС‚СЊ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ employee_id
+--Наполнить таблицу salary 40 строками:
+--- в 10 строк из 40 вставить несуществующие employee_id
 --id
 --employee_id
 --salary_id
@@ -460,13 +460,13 @@ values (default, 93, 2);
 insert into employee_salary (id, employee_id, salary_id)
 values (default, 36, 11);
 
---РўР°Р±Р»РёС†Р° roles
+--Таблица roles
 --
---РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ roles
+--Создать таблицу roles
 --- id. Serial  primary key,
 --- role_name. int, not null, unique
---РџРѕРјРµРЅСЏС‚СЊ С‚РёРї СЃС‚РѕР»Р±Р° role_name СЃ int РЅР° varchar(30)
---РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 20 СЃС‚СЂРѕРєР°РјРё:
+--Поменять тип столба role_name с int на varchar(30)
+--Наполнить таблицу salary 20 строками:
 --
 --id
 --role_name
@@ -585,13 +585,13 @@ values (default, 'Senior Automation QA engineer');
 
 
 
---РўР°Р±Р»РёС†Р° roles_employee
+--Таблица roles_employee
 --
---РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ roles_employee
+--Создать таблицу roles_employee
 --- id. Serial  primary key,
---- employee_id. Int, not null, unique (РІРЅРµС€РЅРёР№ РєР»СЋС‡ РґР»СЏ С‚Р°Р±Р»РёС†С‹ employees, РїРѕР»Рµ id)
---- role_id. Int, not null (РІРЅРµС€РЅРёР№ РєР»СЋС‡ РґР»СЏ С‚Р°Р±Р»РёС†С‹ roles, РїРѕР»Рµ id)
---РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 40 СЃС‚СЂРѕРєР°РјРё:
+--- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
+--- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+--Наполнить таблицу salary 40 строками:
 --
 --id
 --employee_id
