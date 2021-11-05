@@ -19,7 +19,7 @@ select employee_name, monthly_salary from employees e left join employee_salary 
 left join salary s on es.salary_id = s.id where monthly_salary is NULL ;
 
 -- 6. Вывести всех работников с названиями их должности.
-select employee_name, role_name from employees e left join roles_employee re on e.id = re.employee_id left join roles r on re.role_id = r.id;
+select employee_name, role_name from employees e join roles_employee re on e.id = re.employee_id left join roles r on re.role_id = r.id;
 
 -- 7. Вывести имена и должность только Java разработчиков.
 select employee_name, role_name from employees e join roles_employee re on e.id = re.employee_id join roles r on re.role_id = r.id
